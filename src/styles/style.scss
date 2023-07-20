@@ -1,0 +1,101 @@
+@import 'config.scss';
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $veryDarkBlueBG;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 16px;
+    background: $veryDarkBlueCard;
+    padding: 24px;
+    box-shadow: 5px 2px 20px 4px rgba(0, 0, 0, 0.2);
+    width: min-content;
+
+    .media {
+        .hover {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            &:hover {
+                background: rgba($cyan, 0.5);
+                cursor: pointer;
+
+                img {
+                    visibility: visible;
+                }
+            }
+
+            img {
+                width: 48px;
+                visibility: hidden;
+            }
+        }
+
+        > img, > .hover {
+            border-radius: 8px;
+            width: 280px;
+            height: 280px;
+        }
+    }
+
+    .title {
+        color: $white;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+
+        .currency, .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .currency .amount {
+            color: $cyan;
+        }
+    }
+
+    .divider {
+        border-top: 1px solid $veryDarkBlueLine;
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+            width: 32px;
+            border: 1px solid $white;
+            border-radius: 100%;
+        }
+
+        .name {
+            color: $white;
+
+            &:hover {
+                color: $cyan;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
